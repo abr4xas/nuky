@@ -23,7 +23,12 @@
     </div>
 
     <div class="uk-section uk-section-small" id="app">
-        @yield('content')
+        <div class="uk-container uk-container-large">
+            <div uk-grid>
+                @include('nuky::admin.partials.sidebar')
+                @yield('content')
+            </div>
+        </div>
     </div>
     <footer class="uk-section uk-section-xsmall">
         <div class="uk-text-center uk-text-muted">

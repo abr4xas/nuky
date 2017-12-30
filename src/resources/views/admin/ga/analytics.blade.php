@@ -1,16 +1,16 @@
-@extends('UIAdmin::layouts.admin') 
+@extends('nuky::layouts.admin') 
 
 @section('title') 
 Analytics 
 @endsection 
 @push('breadcrumb')
-@include('UIAdmin::admin.partials.breadcrumb', ['link' => trans('UIAdmin::googleanalytics.analyticsbasic') ])
+@include('nuky::admin.partials.breadcrumb', ['link' => trans('nuky::googleanalytics.analyticsbasic') ])
 @endpush
 @section('content')
 <div uk-grid>
     <div class="uk-width-expand@m">
         <div class="uk-card uk-card-default uk-card-body">
-          @include('UIAdmin::admin.ga.inc.usertable')
+          @include('nuky::admin.ga.inc.usertable')
         </div>
     </div>
 </div>

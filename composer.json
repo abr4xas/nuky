@@ -1,7 +1,7 @@
 {
     "name": "abr4xas/nuky",
     "type": "library",
-    "description": "panel",
+    "description": "A panel for Laravel projects",
     "keywords": [
         "abr4xas",
         "nuky"
