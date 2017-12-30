@@ -21,13 +21,15 @@ class nukyServiceProvider extends ServiceProvider
 
             __DIR__.'/assets/css/theme.min.css'                   => public_path($path.'/css/theme.min.css'),
             __DIR__.'/assets/js/theme.min.js'                     => public_path($path.'/js/theme.min.js'),
+            // views
+            __DIR__ . '/resources/views'                        => resource_path('views'),
             // Gravatar
             base_path().'/vendor/creativeorange/gravatar/config/gravatar.php' => config_path('gravatar.php'),
 
         ], 'nuky');
 
         // Load views        
-        $this->loadViewsFrom(resource_path('views/'), 'leadmin');
+        $this->loadViewsFrom(resource_path('views/'), 'nuky');
         // Load translation files
         $this->loadTranslationsFrom(resource_path('lang/vendor/nuky'), 'nuky');
     }

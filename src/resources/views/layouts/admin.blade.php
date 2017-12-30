@@ -23,7 +23,7 @@
     </div>
 
     <div class="uk-section uk-section-small" id="app">
-
+        @yield('content')
     </div>
     <footer class="uk-section uk-section-xsmall">
         <div class="uk-text-center uk-text-muted">
