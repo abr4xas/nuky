@@ -26,9 +26,11 @@ class nukyServiceProvider extends ServiceProvider
             // Gravatar
             base_path().'/vendor/creativeorange/gravatar/config/gravatar.php' => config_path('gravatar.php'),
 
-            __DIR__ . '/Http/Controllers'    => app_path('Http/Controllers'),
+            __DIR__ . '/Http/Controllers'  => app_path('Http/Controllers'),
             // routes
-            __DIR__ . '/routes/web.php'    => base_path('routes/web.php'),
+            __DIR__ . '/routes/web.php'    => base_path('routes/web.php'),            
+            // lang
+            __DIR__.'/resources/lang'      => resource_path('lang/vendor/nuky'),
 
 
         ], 'nuky');
