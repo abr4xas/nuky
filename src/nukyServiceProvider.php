@@ -28,7 +28,7 @@ class nukyServiceProvider extends ServiceProvider
 
             __DIR__ . '/Http/Controllers'    => app_path('Http/Controllers'),
             // routes
-            __DIR__ . '/routes/web.php'    => app_path('routes/web.php'),
+            __DIR__ . '/routes/web.php'    => base_path('routes/web.php'),
 
 
         ], 'nuky');
