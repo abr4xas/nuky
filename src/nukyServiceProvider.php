@@ -4,6 +4,7 @@ namespace abr4xas\nuky;
 
 use Illuminate\Support\ServiceProvider;
 use Creativeorange\Gravatar\Facades\Gravatar;
+use Creativeorange\Gravatar\GravatarServiceProvider;
 
 class nukyServiceProvider extends ServiceProvider
 {
