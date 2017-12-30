@@ -1,0 +1,27 @@
+{
+    "name": "nuky",
+    "version": "1.0.0",
+    "description": "Moden UIKit 3 Administration panel",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ConsoleTVs/Nuky.git"
+    },
+    "dependencies": {
+        "jquery": "^3.2.1",
+        "uikit": "^3.0.0-beta.35"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.23.1",
+        "gulp": "^3.9.1",
+        "gulp-clean-css": "^3.9.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-header": "^1.8.9",
+        "gulp-sass": "^3.1.0",
+        "gulp-size": "^3.0.0",
+        "gulp-sourcemaps": "^2.6.2",
+        "gulp-uglify": "^3.0.0",
+        "gulp-util": "^3.0.8"
+    },
+    "author": "Erik Campobadal"
+}
