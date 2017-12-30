@@ -18,7 +18,7 @@ class nukyServiceProvider extends ServiceProvider
 
         $this->publishes([
 
-            __DIR__.'/assets/css/theme.min.css'                     => public_path($path.'/css/theme.min.css'),
+            __DIR__.'/assets/css/theme.min.css'                   => public_path($path.'/css/theme.min.css'),
             __DIR__.'/assets/js/theme.min.js'                     => public_path($path.'/js/theme.min.js'),
             // Gravatar
             base_path().'/vendor/creativeorange/gravatar/config/gravatar.php' => config_path('gravatar.php'),
