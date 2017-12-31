@@ -1,72 +1,52 @@
 @extends('nuky::layouts.admin') 
-
 @section('title') 
-Analytics 
+Analytics
 @endsection 
-@push('breadcrumb')
-@include('nuky::admin.partials.breadcrumb', ['link' => trans('nuky::googleanalytics.analyticsbasic') ])
-@endpush
 @section('content')
-<div uk-grid>
-    <div class="uk-width-expand@m">
-        <div class="uk-card uk-card-default uk-card-body">
-          @include('nuky::admin.ga.inc.usertable')
-        </div>
-    </div>
-</div>
-<div uk-grid class="uk-child-width-1-1@s uk-child-width-1-2@l">
-    <div>
-        <div class="uk-card uk-card-default">
-            <div class="uk-card-header">
-                Visitor and Page View
-            </div>
-            <div class="uk-card-body">
-                <canvas id="areaChart"></canvas>
+<div class="uk-width-1-1@m uk-width-2-3@l uk-width-3-4@xl">
+    <div uk-grid class="uk-grid-small">
+        @include('nuky::admin.ga.inc.usertable')
+        <div class="uk-width-1-1@s uk-width-1-2@l uk-width-1-4@xl">
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-body uk-text-center">
+                    <span class="statistic-title">Visitor and Page View</span>
+                    <canvas id="areaChart"></canvas>
+                </div>
             </div>
         </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default">
-            <div class="uk-card-header">
-                Browser
-            </div>
-            <div class="uk-card-body">
-                <canvas id="pieChart"></canvas>
+        <div class="uk-width-1-1@s uk-width-1-2@l uk-width-1-4@xl">
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-body uk-text-center">
+                    <span class="statistic-title">Browser</span>
+                    <canvas id="pieChart"></canvas>
+                </div>
             </div>
         </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default">
-            <div class="uk-card-header">
-                Country
-            </div>
-            <div class="uk-card-body">
-                <canvas id="lineChart"></canvas>
+        <div class="uk-width-1-1@s uk-width-1-2@l uk-width-1-4@xl">
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-body uk-text-center">
+                    <span class="statistic-title">Country</span>
+                    <canvas id="lineChart"></canvas>
+                </div>
             </div>
         </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-default">
-            <div class="uk-card-header">
-                Visitor and Page View
-            </div>
-            <div class="uk-card-body">
-                <canvas id="barChart"></canvas>
+        <div class="uk-width-1-1@s uk-width-1-2@l uk-width-1-4@xl">
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-body uk-text-center">
+                    <span class="statistic-title">Visitor and Page View</span>
+                    <canvas id="barChart"></canvas>
+                </div>
             </div>
         </div>
     </div>
 </div>
-@php
-//dd($p_and_v_dates);
-@endphp
-
-@endsection
-
+@php //dd($p_and_v_dates); @endphp 
+@endsection 
 @push('scripts')
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.1/Chart.min.js"></script>
 <script>
-  $(function () {
+	$(function () {
     /* ChartJS
      * -------
      * Here we will create a few charts using ChartJS
@@ -251,6 +231,6 @@ Analytics
     barChartOptions.datasetFill = false;
     barChart.Bar(barChartData, barChartOptions);
   });
+
 </script>
 @endpush
-

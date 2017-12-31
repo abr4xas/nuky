@@ -1,47 +1,49 @@
-@extends('UIAdmin::layouts.admin') 
+@extends('nuky::layouts.admin') @section('title') {{ trans('nuky::googleanalytics.topcontent') }} @endsection @section('content')
+<div class="uk-width-1-1@m uk-width-2-3@l uk-width-3-4@xl">
+	<div uk-grid class="uk-grid-small">
+		<div class="uk-width-1-1@s">
+			<div class="uk-card uk-card-default">
+				<div class="uk-card-header">
+					<div class="card-title">
+						<div uk-grid>
+							<div class="uk-width-6">
+								<h5>
+									{{ $description }}
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="uk-card-body">
+					<div class="uk-overflow-auto">
+						<table class="uk-table uk-table-divider">
+							<tr>
+                                <th class="uk-table-shrink">Page</th>
+								<th class="uk-table-shrink">Pageviews</th>
+								<th class="uk-table-shrink">Unique Pageviews</th>
+								<th class="uk-table-shrink">Time on Page</th>
+								<th class="uk-table-shrink">Bounces</th>
+								<th class="uk-table-shrink">Entrances</th>
+								<th class="uk-table-shrink">Exits</th>
+							</tr>
+							@foreach($entries as $key => $item)
+							<tr>
+								<td  class="uk-text-truncate" title="{{ $item[0] }}" uk-tooltip="pos: bottom">{{ $item[0] }}</td>
+								<td  class="uk-table-shrink">{{ $item[1] }}</td>
+								<td  class="uk-table-shrink">{{ $item[2] }}</td>
+								<td  class="uk-table-shrink">{{ $item[3] }}</td>
+								<td  class="uk-table-shrink">{{ $item[4] }}</td>
+								<td  class="uk-table-shrink">{{ $item[5] }}</td>
+								<td  class="uk-table-shrink">{{ $item[6] }}</td>
+							</tr>
+							@endforeach
+						</table>
+					</div>
 
-@section('title') 
-Analytics 
-@endsection 
-@push('breadcrumb')
-@include('UIAdmin::admin.partials.breadcrumb', ['link' => trans('UIAdmin::googleanalytics.topcontent') ])
-@endpush
-@section('content')
-<div uk-grid>
-    <div class="uk-width-expand@m">
-        <div class="uk-card uk-card-default uk-card-body">
-            <span class="statistics-text">
-                {{ $description }}
-            </span>
-            <table class="uk-table">
-                <tr>
-                    <th style="width:40%">Page</th>
-                    <th>Pageviews</th>
-                    <th>Unique Pageviews</th>
-                    <th>Time on Page</th>
-                    <th>Bounces</th>
-                    <th>Entrances</th>
-                    <th>Exits</th>
-                </tr>
-                @foreach($entries as $key => $item)
-                <tr>
-                    <td style="word-wrap: break-word;">{{ $item[0]  }}</td>
-                    <td style="width:10%">{{ $item[1]  }}</td>
-                    <td style="width:10%">{{ $item[2]  }}</td>
-                    <td style="width:10%">{{ $item[3]  }}</td>
-                    <td style="width:10%">{{ $item[4]  }}</td>
-                    <td style="width:10%">{{ $item[5]  }}</td>
-                    <td style="width:10%">{{ $item[6]  }}</td>
-                </tr>
-                @endforeach
-            {{ $entries->withPath('analytics-topcontent')->links('UIAdmin::admin.partials.pagination.default') }}
-            </table>
-        </div>
-    </div>
+					{{ $entries->withPath('analytics-keywords')->links('nuky::admin.partials.pagination.default') }}
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
 @endsection
-
-
-
-
