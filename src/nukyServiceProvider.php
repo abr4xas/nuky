@@ -1,6 +1,6 @@
 <?php
 
-namespace abr4xas\nuky;
+namespace Abr4xas\Nuky;
 
 use Illuminate\Support\ServiceProvider;
 use Creativeorange\Gravatar\Facades\Gravatar;
@@ -16,23 +16,18 @@ class nukyServiceProvider extends ServiceProvider
     public function boot()
     {
         $path = '/nuky';
-
         $this->publishes([
-
-            __DIR__.'/assets/css/theme.min.css'                   => public_path($path.'/css/theme.min.css'),
-            __DIR__.'/assets/js/theme.min.js'                     => public_path($path.'/js/theme.min.js'),
+            __DIR__.'/assets/css/theme.min.css' => public_path($path.'/css/theme.min.css'),
+            __DIR__.'/assets/js/theme.min.js'   => public_path($path.'/js/theme.min.js'),
             // views
-            __DIR__ . '/resources/views'                        => resource_path('views'),
+            __DIR__ . '/resources/views'        => resource_path('views'),
             // Gravatar
             base_path().'/vendor/creativeorange/gravatar/config/gravatar.php' => config_path('gravatar.php'),
-
             __DIR__ . '/Http/Controllers'  => app_path('Http/Controllers'),
             // routes
             __DIR__ . '/routes/web.php'    => base_path('routes/web.php'),            
             // lang
             __DIR__.'/resources/lang'      => resource_path('lang/vendor/nuky'),
-
-
         ], 'nuky');
 
         // Load views        

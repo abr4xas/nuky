@@ -46,7 +46,7 @@
         },        
         "laravel": {
             "providers": [
-                "abr4xas\\nuky\\nukyServiceProvider"
+                "Abr4xas\\Nuky\\nukyServiceProvider"
             ]
         }
     },

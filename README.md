@@ -7,7 +7,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-// TODO
+A Laravel 5 package that switch default Laravel scaffolding / boilerplate to UIkit template.
 
 
 ## Install
@@ -15,13 +15,25 @@
 Via Composer
 
 ``` bash
-// TODO
+"require": {
+    "abr4xas/nuky": "dev-master"
+}
 ```
 
-## Usage
+* In Laravel 5.5 the package will autoregister the service provider. 
+* In Laravel 5.4 you must install this service provider.
 
-``` php
-// TODO
+```php
+// config/app.php
+'providers' => [
+    Abr4xas\Nuky\nukyServiceProvider::class
+];
+```
+
+Then:
+
+```bash
+php artisan vendor:publish --tag=nuky --force
 ```
 
 ## Change log
@@ -36,16 +48,20 @@ $ composer test
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) for details.
+Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE OF CONDUCT](CODE_OF_CONDUCT.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
+If you discover any security related issues, please  click [here](https://github.com/abr4xas/nuky/issues/new).
+
+## Support
+
+Does your business depend on our contributions? Reach out and support me on [Patreon](https://www.patreon.com/abr4xas). All pledges will be dedicated to allocating workforce on maintenance and new awesome stuff.
 
 ## Credits
 
-
-// TODO
+* Laravel package: [Angel Cruz](https://github.com/abr4xas)
+* HTML template: [Erik Campobadal](https://github.com/ConsoleTVs/Nuky)
 
 ## License
 
@@ -63,5 +79,5 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-scrutinizer]: https://scrutinizer-ci.com/g/abr4xas/nuky/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/abr4xas/nuky
 [link-downloads]: https://packagist.org/packages/abr4xas/nuky
-[link-author]: https://github.com/:author_username
+[link-author]: https://github.com/abr4xas
 [link-contributors]: ../../contributors

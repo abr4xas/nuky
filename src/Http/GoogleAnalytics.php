@@ -1,6 +1,6 @@
 <?php 
 
-namespace abr4xas\nuky\Http;
+namespace Abr4xas\Nuky\Http;
 
 use Analytics;
 use Carbon\Carbon;
