@@ -1,4 +1,6 @@
-## nuky
+<p align="center">
+    <img alt="Nuky" src="https://image.ibb.co/cptpRb/nuky.png">
+</p>
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
