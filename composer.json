@@ -1,7 +1,7 @@
 {
     "name": "abr4xas/nuky",
     "type": "library",
-    "description": "A panel for Laravel projects",
+    "description": "A Laravel 5 package that switch default Laravel scaffolding / boilerplate to UIkit template.",
     "keywords": [
         "abr4xas",
         "nuky"
